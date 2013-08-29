@@ -10,7 +10,7 @@ class @NotificationManager
   @render: (msg, type) ->
     Meteor.clearTimeout(Session.get('currentTimeout')) if Session.get('currentTimeout')
     $('#notification-top').remove()
-    $('body').append(new Handlebars.SafeString(Template['notificationTop']({message: msg, type: type})).string)
+    $('body').prepend(new Handlebars.SafeString(Template['notificationTop']({message: msg, type: type})).string)
     $('#notification-top').fadeIn()
     timeoutId = Meteor.setTimeout(
       () ->
