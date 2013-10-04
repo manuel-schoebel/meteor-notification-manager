@@ -29,6 +29,6 @@ class @NotificationManager
       type: type,
       html: options.html,
       sticky: options.sticky
-    } )))
+    } )).string)
 
     $('#notification-top').alert()
