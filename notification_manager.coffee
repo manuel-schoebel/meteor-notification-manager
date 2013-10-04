@@ -5,11 +5,11 @@ class @NotificationManager
   @setSuccess : (msg, options) ->
     NotificationManager.render(msg, 'success', options)
   @setWarning: (msg, options) ->
-    NotificationManager.render(msg, '', options)
+    NotificationManager.render(msg, 'warning', options)
 
   @render: (msg, type, options) ->
 
-    if options.sticky
+    if options and options.sticky
       @renderSticky(msg, type, options)
     else
       Meteor.clearTimeout(Session.get('currentTimeout')) if Session.get('currentTimeout')
