@@ -1,7 +1,7 @@
 <template name="notificationTop">
-  <div id="notification-top" class="alert alert-{{type}}" style="position:fixed;top:0px;left:0px;right:0px;z-index:9999;display:none;">
+  <div id="notification-top" class="alert alert-{{type}}" style="width: 50%;position:fixed;top:0px;left:25%;z-index:9999;">
     {{#if sticky}}
-      <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+      <a class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
     {{/if}}
     {{#if html}}
       {{{ message }}}
